@@ -1,0 +1,68 @@
+A instalação do Oracle VirtualBOX no Linux Mint e bem simples, vou mostrar os procedimentos que utilizo para instalar em máquina física, com suporte a atualização pelo MintUpdate.
+
+Lembrando, existe vários software de virtualização para o GNU Linux, como por exemplo: QEMU, KVM, VMware Workstation, etc, o VirtualBOX geralmente é o mais simples e mais didático, muitas vezes ele não e recomendado para produção (virtualização de servidores de produção) e sim, para o aprendizado de tecnologia.
+
+Vale lembrar que existe duas formas de instalar o VirtualBOX, baixando o binário ou adicionando o Source List, que é o foco desse vídeo.
+
+Tecnologias de Virtualização de Processadores AMD e Intel
+vmx – Intel VT-x, suporte a virtualização ativada na BIOS.
+svm – AMD SVM, suporte a virtualização ativada na BIOS.
+
+Processadores da AMD e Intel
+aes – Aplicativos que executam criptografia e descriptografia usando o Advanced Encryption Standard em processadores Intel e AMD.
+
+Processadores da Intel
+ept – Suporte de tabela de páginas estendidas da Intel habilitado para tornar mais rápida a emulação de tabelas de páginas de convidados.
+vpid – ID do processador virtual da Intel. Faça descargas de TLB caras desnecessárias quando alternar o contexto entre os convidados.
+tpr_shadow e flexpriority – Recurso da Intel que reduz as chamadas para o hipervisor ao acessar o Registro de prioridade de tarefas, o que ajuda na execução de determinados tipos de convidados do SMP.
+vnmi – O Intel Virtual NMI ajuda com eventos de interrupção selecionados em convidados.
+
+Processadores da AMD
+npt – Tabelas de Páginas Aninhadas AMD, semelhantes ao Intel EPT.
+lbrv – Suporte de virtualização da AMD LBR.
+svm_lock – MSR de bloqueio AMD SVM.
+nrip_save – AMD SVM next_rip salvar.
+tsc_scale – Suporte de dimensionamento do AMD TSC.
+vmcb_clean – Suporte para bits limpos AMD VMCB.
+flushbyasid – Suporte para AMD flush-by-ASID.
+decodeassists – AMD Decode Assistir ao suporte.
+pausefilter – Interrupção de pausa filtrada AMD.
+pfthreshold – AMD pausa o limite do filtro.
+
+Primeira Etapa: Verificação da versão do Linux Mint
+sudo hostnamectl
+sudo lsb_release -c
+sudo uname -a
+
+Segunda Etapa: Verificação do Suporte a Virtualização Intel VT-x ou AMD-v
+sudo lscpu | grep vmx
+sudo lscpu | grep Virtualização
+sudo inxi -SCf
+
+Terceira Etapa: Teste de Suporte a Virtualização
+sudo apt install cpu-checker libvirt-clients
+sudo kvm-ok
+sudo virt-host-validate
+
+Quarta Etapa: Atualização do Sistema Operacional
+sudo apt update
+sudo apt upgrade
+sudo apt dist-upgrade
+sudo apt autoremove
+sudo apt autoclean
+sudo apt clean
+
+Quinta Etapa: Adicionando o Repositório do VirtualBOX
+sudo sh -c 'echo "deb http://download.virtualbox.org/virtualbox/debian bionic contrib" >> /etc/apt/sources.list.d/virtualbox.list'
+
+Sexta Etapa: Baixando e Instalando as Chaves de Autenticação do VirtualBOX
+wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
+
+Sétima Etapa: Instalando o VirtualBOX
+sudo apt update
+sudo apt install virtualbox-6.0 vim git
+
+Oitava Etapa: Instalando o Pacote de Extensões do VirtualBOX
+wget https://download.virtualbox.org/virtualbox/6.0.12/Oracle_VM_VirtualBox_Extension_Pack-6.0.12.vbox-extpack
+virtualbox Oracle_VM_VirtualBox_Extension_Pack-6.0.12.vbox-extpack
