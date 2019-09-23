@@ -1,20 +1,28 @@
-A instalação do Oracle VirtualBOX no Linux Mint e bem simples, vou mostrar os procedimentos que utilizo para instalar em<br> máquina física, com suporte a atualização pelo MintUpdate.
+A instalação do Oracle VirtualBOX no Linux Mint e bem simples, vou mostrar os procedimentos que utilizo para instalar em
+máquina física, com suporte a atualização pelo MintUpdate.
 
-Lembrando, existe vários software de virtualização para o GNU Linux, como por exemplo: QEMU, KVM, VMware Workstation, etc, o<br>  VirtualBOX geralmente é o mais simples e mais didático, muitas vezes ele não e recomendado para produção<br>  (virtualização de servidores de produção) e sim, para o aprendizado de tecnologia.
+Lembrando, existe vários software de virtualização para o GNU Linux, como por exemplo: QEMU, KVM, VMware Workstation, etc,
+o VirtualBOX geralmente é o mais simples e mais didático, muitas vezes ele não e recomendado para produção  (virtualização
+de servidores de produção) e sim, para o aprendizado de tecnologia.
 
-Vale lembrar que existe duas formas de instalar o VirtualBOX, baixando o binário ou adicionando o Source List, que é o foco<br>  desse vídeo.
+Vale lembrar que existe duas formas de instalar o VirtualBOX, baixando o binário ou adicionando o Source List, que é o foco
+desse vídeo.
 
 Tecnologias de Virtualização de Processadores AMD e Intel
 vmx – Intel VT-x, suporte a virtualização ativada na BIOS.
 svm – AMD SVM, suporte a virtualização ativada na BIOS.
 
 Processadores da AMD e Intel
-aes – Aplicativos que executam criptografia e descriptografia usando o Advanced Encryption Standard em processadores Intel<br>  e AMD.
+aes – Aplicativos que executam criptografia e descriptografia usando o Advanced Encryption Standard em processadores Intel
+e AMD.
 
 Processadores da Intel
-ept – Suporte de tabela de páginas estendidas da Intel habilitado para tornar mais rápida a emulação de tabelas de páginas<br>  de convidados.
-vpid – ID do processador virtual da Intel. Faça descargas de TLB caras desnecessárias quando alternar o contexto entre os<br>  convidados.
-tpr_shadow e flexpriority – Recurso da Intel que reduz as chamadas para o hipervisor ao acessar o Registro de prioridade<br>  de tarefas, o que ajuda na execução de determinados tipos de convidados do SMP.
+ept – Suporte de tabela de páginas estendidas da Intel habilitado para tornar mais rápida a emulação de tabelas de páginas
+de convidados.
+vpid – ID do processador virtual da Intel. Faça descargas de TLB caras desnecessárias quando alternar o contexto entre os
+convidados.
+tpr_shadow e flexpriority – Recurso da Intel que reduz as chamadas para o hipervisor ao acessar o Registro de prioridade
+de tarefas, o que ajuda na execução de determinados tipos de convidados do SMP.
 vnmi – O Intel Virtual NMI ajuda com eventos de interrupção selecionados em convidados.
 
 Processadores da AMD
