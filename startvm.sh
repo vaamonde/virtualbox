@@ -9,7 +9,7 @@
 # YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica
 # Data de criação: 21/09/2019
 # Data de atualização: 23/09/2019
-# Versão: 0.03
+# Versão: 0.04
 # Testado e homologado para a versão do Linux Mint 19.x x64
 # Kernel >= 4.15.x e 5.0.x
 
@@ -111,6 +111,17 @@ case "$1" in
         echo "Selecione test ou remote para testar o acesso remoto a $VM"
         ;;
 
+# Em desenvolvimento (falha para desligar o Windows 7 por ACPI Advanced Configuration and Power Interface)
+# Acompanhe o arquivo CHANGELOG sobre as mudanças do script e correções: https://github.com/vaamonde/virtualbox/blob/master/CHANGELOG
+# Reporte falhas, erros, melhorias, sugestões na opção: ISSUE do Github: https://github.com/vaamonde/virtualbox/issues
+# poweroff)
+#       echo "Desligando a Máquina Virtual $VM"
+#       nohup VBoxManage controlvm $VM acpipowerbutton &2> /dev/null &
+#       sleep 2
+#       echo "Máquina desligada, selecione start para iniciar a Máquina Virtual $VM"
+#       echo "Selecione test ou remote para testar o acesso remoto a $VM"
+#       ;;
+        
   test)
         echo "Verificando o acesso a Máquina Virtual $VM"
         echo
@@ -191,6 +202,8 @@ case "$1" in
         echo "sh startvm.sh reset   - Reinicia a máquina virtual $VM"
         echo "sh startvm.sh restart - Para e Inicia a máquina virtual $VM"
         echo "sh startvm.sh stop    - Para a máquina virtual $VM"
+        #Em desenvolvimento (falha para desligar o Windows 7 por ACPI Advanced Configuration and Power Interface)
+        #echo "sh startvm.sh poweroff - Desliga a máquina virtual $VM"
         echo "sh startvm.sh test    - Testa o acesso a máquina virtual $VM"
         echo "sh startvm.sh list    - Lista todas as máquinas virtuais criadas no VirtualBOX"
         echo "sh startvm.sh run     - Lista todas as máquinas virtuais iniciadas no VirtualBOX"
