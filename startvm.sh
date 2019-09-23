@@ -39,8 +39,8 @@ COLOR="16"
 RESOLUTION="1024x768"
 
 # Em desenvolvimento (falhas de compilação, acesso remoto e execução de aplicativos seamless)
-# Acompanhe o arquivo CHANGELOG sobre as mudanças do script e correções: 
-# Reporte falhas, erros, melhorias, sugestões na opção: ISSUE do Github:
+# Acompanhe o arquivo CHANGELOG sobre as mudanças do script e correções: https://github.com/vaamonde/virtualbox/blob/master/CHANGELOG
+# Reporte falhas, erros, melhorias, sugestões na opção: ISSUE do Github: https://github.com/vaamonde/virtualbox/issues
 # SEAMLESS="c:\seamlessrdp\seamlessrdpshell.exe"
 # API="excel.exe"
 
