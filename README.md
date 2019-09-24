@@ -13,13 +13,13 @@ Curta ✔ Comente ✔ Compartilhe ✔ Inscreva-se ✔ Divulgue o Canal ✔ Cliqu
 👨🏻‍🎓 Cursos ONLINE Grátis no http://aulaead.com
 🚨Cursos Grátis e Completos com direito a Certificado de Conclusão só no http://aulaead.com/
 
-Procedimentos em TI: http://procedimentosemti.com.br
-Bora para Prática: http://boraparapratica.com.br
-Robson Vaamonde: http://vaamonde.com.br
-Facebook Procedimentos em TI: http://facebook.com/procedimentosemti
-Facebook Bora para Prática: http://facebook.com/boraparapratica
-Instagram Procedimentos em TI: https://www.instagram.com/procedimentoem/
-YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica
+Procedimentos em TI: http://procedimentosemti.com.br<br>
+Bora para Prática: http://boraparapratica.com.br<br>
+Robson Vaamonde: http://vaamonde.com.br<br>
+Facebook Procedimentos em TI: http://facebook.com/procedimentosemti<br>
+Facebook Bora para Prática: http://facebook.com/boraparapratica<br>
+Instagram Procedimentos em TI: https://www.instagram.com/procedimentoem/<br>
+YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 
 🔴 VBoxHeadless no VIRTUALBOX 6.0 rodando no LINUX MINT 19.2 Tina x64
 
