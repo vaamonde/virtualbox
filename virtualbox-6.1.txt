@@ -73,5 +73,5 @@ sudo apt update
 sudo apt install virtualbox-6.1 vim git
 
 Oitava Etapa: Instalando o Pacote de Extensões do VirtualBOX
-wget https://download.virtualbox.org/virtualbox/6.1.8/Oracle_VM_VirtualBox_Extension_Pack-6.1.8.vbox-extpack
-virtualbox Oracle_VM_VirtualBox_Extension_Pack-6.1.8.vbox-extpack
+wget https://download.virtualbox.org/virtualbox/6.1.10/Oracle_VM_VirtualBox_Extension_Pack-6.1.10.vbox-extpack
+virtualbox Oracle_VM_VirtualBox_Extension_Pack-6.1.10.vbox-extpack
