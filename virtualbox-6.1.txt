@@ -62,7 +62,11 @@ sudo apt autoclean
 sudo apt clean
 
 Quinta Etapa: Adicionando o Repositório do VirtualBOX
+#Suporte para o Linux Mint 19.x (Tara, Tessa, Tina e Tricia) e Ubuntu 18.04.x (Bionic Beaver)
 sudo sh -c 'echo "deb http://download.virtualbox.org/virtualbox/debian bionic contrib" >> /etc/apt/sources.list.d/virtualbox.list'
+
+#Suporte para o Linux Mint 20.x (Ulyana e Ulyssa) e Ubuntu 20.04.x (Focal Fossa)
+sudo sh -c 'echo "deb http://download.virtualbox.org/virtualbox/debian focal contrib" >> /etc/apt/sources.list.d/virtualbox.list'
 
 Sexta Etapa: Baixando e Instalando as Chaves de Autenticação do VirtualBOX
 wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
@@ -73,5 +77,5 @@ sudo apt update
 sudo apt install virtualbox-6.1 vim git
 
 Oitava Etapa: Instalando o Pacote de Extensões do VirtualBOX
-wget https://download.virtualbox.org/virtualbox/6.1.12/Oracle_VM_VirtualBox_Extension_Pack-6.1.12.vbox-extpack
-virtualbox Oracle_VM_VirtualBox_Extension_Pack-6.1.12.vbox-extpack
+wget https://download.virtualbox.org/virtualbox/6.1.14/Oracle_VM_VirtualBox_Extension_Pack-6.1.14.vbox-extpack
+virtualbox Oracle_VM_VirtualBox_Extension_Pack-6.1.14.vbox-extpack
