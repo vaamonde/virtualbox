@@ -21,7 +21,7 @@ ept – Suporte de tabela de páginas estendidas da Intel habilitado para tornar
 de convidados.
 vpid – ID do processador virtual da Intel. Faça descargas de TLB caras desnecessárias quando alternar o contexto entre os
 convidados.
-tpr_shadow e flexpriority – Recurso da Intel que reduz as chamadas para o hipervisor ao acessar o Registro de prioridade
+tpr_shadow e flexpriority – Recurso da Intel que reduz as chamadas para o hypervisor ao acessar o Registro de prioridade
 de tarefas, o que ajuda na execução de determinados tipos de convidados do SMP.
 vnmi – O Intel Virtual NMI ajuda com eventos de interrupção selecionados em convidados.
 

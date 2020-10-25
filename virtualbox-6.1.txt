@@ -21,7 +21,7 @@ ept – Suporte de tabela de páginas estendidas da Intel habilitado para tornar
 de convidados.
 vpid – ID do processador virtual da Intel. Faça descargas de TLB caras desnecessárias quando alternar o contexto entre os
 convidados.
-tpr_shadow e flexpriority – Recurso da Intel que reduz as chamadas para o hipervisor ao acessar o Registro de prioridade
+tpr_shadow e flexpriority – Recurso da Intel que reduz as chamadas para o hypervisor ao acessar o Registro de prioridade
 de tarefas, o que ajuda na execução de determinados tipos de convidados do SMP.
 vnmi – O Intel Virtual NMI ajuda com eventos de interrupção selecionados em convidados.
 
@@ -77,5 +77,5 @@ sudo apt update
 sudo apt install virtualbox-6.1 vim git
 
 Oitava Etapa: Instalando o Pacote de Extensões do VirtualBOX
-wget https://download.virtualbox.org/virtualbox/6.1.14/Oracle_VM_VirtualBox_Extension_Pack-6.1.14.vbox-extpack
-virtualbox Oracle_VM_VirtualBox_Extension_Pack-6.1.14.vbox-extpack
+wget https://download.virtualbox.org/virtualbox/6.1.16/Oracle_VM_VirtualBox_Extension_Pack-6.1.16.vbox-extpack
+virtualbox Oracle_VM_VirtualBox_Extension_Pack-6.1.16.vbox-extpack

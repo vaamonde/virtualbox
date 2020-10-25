@@ -7,9 +7,11 @@
 # Instagram Procedimentos em TI: https://www.instagram.com/procedimentoem/
 # YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica
 # Data de criação: 21/09/2019
-# Data de atualização: 23/09/2019
-# Versão: 0.01
+# Data de atualização: 21/10/2020
+# Versão: 0.02
 # Testado e homologado para a versão do Linux Mint 19.x x64
 # Kernel >= 4.15.x e 5.0.x
 
+21/10/2020 - Robson Vaamonde - Atualização do script virtualbox-6.1.txt
+15/10/2020 - Robson Vaamonde - Atualização do script startvm.sh
 23/09/2019 - Robson Vaamonde - Criação do arquivo de CHANGELOG
