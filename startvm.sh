@@ -8,14 +8,15 @@
 # Instagram Procedimentos em TI: https://www.instagram.com/procedimentoem/
 # YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica
 # Data de criação: 21/09/2019
-# Data de atualização: 15/10/2020
-# Versão: 0.05
-# Testado e homologado para a versão do Linux Mint 19.x x64
+# Data de atualização: 29/12/2020
+# Versão: 0.06
+# Testado e homologado para a versão do Linux Mint 19.x e 20.x - x64
 # Kernel >= 4.15.x e 5.0.x
 
 # Links de apoio para o script do SeamlessRDP
 # SeamlessRDP.exe = https://github.com/rdesktop/SeamlessRDP
 # SeamlessRDP.sh = https://github.com/fsschmidt/seamlessrdp
+# RemoteApp Tool = https://github.com/kimmknight/remoteapptool
 
 # Dependências do script, executar a instalação antes de usar o script
 # sudo apt update
@@ -57,6 +58,25 @@ SEAMLESS="c:\seamlessrdp\seamlessrdpshell.exe"
 # ping = https://ss64.com/nt/ping.html
 # nmap = https://nmap.org/man/pt_BR/index.html
 # Seamless = https://github.com/rdesktop/SeamlessRDP
+
+#
+# Verificando se as dependências do Start-VM estão instaladas
+# opção do dpkg: -s (status), opção do echo: -e (interpretador de escapes de barra invertida), -n (permite nova linha)
+# || (operador lógico OU), 2> (redirecionar de saída de erro STDERR), && = operador lógico AND, { } = agrupa comandos em blocos
+# [ ] = testa uma expressão, retornando 0 ou 1, -ne = é diferente (NotEqual)
+echo -n "Verificando as dependências do Start-VM, aguarde... "
+	for name in nmap git autoconf libtool m4 automake mingw-w64
+	do
+  		[[ $(dpkg -s $name 2> /dev/null) ]] || { 
+              echo -en "\n\nO software: $name precisa ser instalado. \nUse o comando 'apt install $name'\n";
+              deps=1; 
+              }
+	done
+		[[ $deps -ne 1 ]] && echo "Dependências.: OK" || { 
+            echo -en "\nInstale as dependências acima e execute novamente este script\n";
+            exit 1; 
+            }
+		sleep 5
 
 #Iniciando o Bloco de Case para a escolha das opções.
 case "$1" in
@@ -222,8 +242,8 @@ case "$1" in
         echo "sh startvm.sh info		- Informações detalhadas da máquina virtual $VM"
         echo "sh startvm.sh remote		- Acesso remoto a máquina virtual $RESOLUTION $VM"
         echo "sh startvm.sh full		- Acesso remoto a máquina virtual full screen $VM"
-	  echo "sh startvm.sh seamlesson	- Acesso remoto a máquina virtual full screen $VM"  
-	  echo "sh startvm.sh seamlessoff	- Acesso remoto a máquina virtual full screen $VM"  
+	    echo "sh startvm.sh seamlesson	- Acesso remoto a máquina virtual full screen $VM"  
+	    echo "sh startvm.sh seamlessoff	- Acesso remoto a máquina virtual full screen $VM"  
         #Em desenvolvimento (falhas de compilação, acesso remoto e execução de aplicativos seamless)
         #echo "sh startvm.sh notepad - Acesso remoto ao software Notepad Seamless na máquina virtual $VM"
         #echo "sh startvm.sh excel   - Acesso remoto ao software Excel Seamless na máquina virtual $VM"
